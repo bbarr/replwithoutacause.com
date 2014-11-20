@@ -1,0 +1,204 @@
+
+* { margin: 0; padding: 0 }
+
+html, body {
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+#portfolio {
+  font-family: Lato, sans-serif;
+  color: #333;
+}
+
+#menu {
+  border-right: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#menu h1 {
+  margin-bottom: 20px;
+}
+
+#menu h1 small {
+  display: block;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#menu ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.category-border.start-up {
+  border-color: #7BC4AD;
+}
+
+.category-border.clients {
+  border-color: #C5DA52;
+}
+
+.category-border.other-code {
+  border-color: #F6A68D;
+}
+
+.category-bg.start-up {
+  background: #7BC4AD;
+  color: #fff;
+}
+
+.category-bg.clients {
+  background: #C5DA52;
+  color: #fff;
+}
+
+.category-bg.other-code {
+  background: #F6A68D;
+  color: #fff;
+}
+
+#menu ul li ul li {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  color: #333;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+#menu ul li ul li.init {
+  opacity: 0;
+}
+
+#menu ul li ul li:hover,
+#menu ul li ul li.active {
+  cursor: pointer;
+  color: #fff;
+}
+
+#menu h3 {
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #efefef;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.project {
+  padding: 20px;
+  background: #fafafa;
+  margin-bottom: 20px;
+  overflow: auto;
+  border-left: 5px solid;
+  margin-left: 0;
+  margin-right: 0;
+  transition: margin .5s;
+}
+
+.project.selected {
+  background: #fff;
+}
+
+.project.init {
+  margin-left: 120%;
+  margin-right: -120%;
+}
+
+.project h3 {
+  margin-bottom: 20px;
+}
+
+.project h3 small {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  float: right;
+}
+
+.project .details .technologies span {
+  display: inline-block;
+  border-bottom: 1px dotted #555;
+  margin-right: 6px;
+}
+
+strong {
+  float: left;
+  margin-right: 10px;
+}
+
+a {
+  color: #2C94C1;
+}
+
+.detail {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  float: right;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.gallery .thumbs {
+  width: 20%;
+  min-height: 20px;
+}
+
+.gallery .thumbs img {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #888;
+  box-sizing: border-box;
+}
+
+.gallery .thumbs img:hover {
+  cursor: pointer;
+}
+
+.gallery img.big {
+  width: 79%;
+  float: right;
+  margin-left: 1%;
+  border: 1px solid #888;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+
+img.image {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+img.image.loading {
+  opacity: 0;
+}
