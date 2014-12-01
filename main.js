@@ -102,6 +102,12 @@
               }, this)
             }
           </ul>
+          <div className="contact">
+            <p><a href="bbarr.github.io">Blog</a></p>
+            <p><a href="github.com/bbarr">Code</a></p>
+            <p><a href="https://angel.co/brendan-barr-1">Resume</a></p>
+            <p><a href="mailto:bbarr1384@gmail.com">bbarr1384@gmail.com</a></p>
+          </div>
         </div>
       )
     }
@@ -125,6 +131,7 @@
                   index={index} />
               }, this)
             }
+            <li className="ignore">...work in progress, more to come.</li>
           </ul>
         </li>
       )
@@ -267,8 +274,12 @@
             { p.name } 
             <small className={"category-bg " + cat.className}>{cat.name}</small>
           </h3>
-          {this.renderGallery(p.images)}
+          { p.images.length ? this.renderGallery(p.images) : null }
+          { p.repo ? <div className="gallery"><a target="replwithoutacause-repo" className="repo-link big" href={p.repo}>View Code</a></div> : null }
           <div className="details">
+            <div className="detail">
+              { p.description && p.description.length ? p.description.map(function(d) { return <p>{d}</p> }) : null }
+            </div>
             <div className="detail">
               <strong>Link:</strong>
               <p><a href={ p.link }>{ p.link }</a></p>
@@ -316,6 +327,9 @@
         technologies: [ 'Javascript', 'ReactJS', 'Sass', 'Browserify', 'Firebase', 'AWS/S3' ],
         role: 'All the things.',
         link: 'http://jotcook.com',
+        description: [
+          "Create better recipes by keeping track of tweaks and tasting notes."
+        ],
         images: [ imgRoot + '/jotcook1.png', imgRoot + '/jotcook2.png', imgRoot + '/jotcook3.png' ]
       },
       {
@@ -324,14 +338,21 @@
         technologies: [ 'Javascript', 'ReactJS', 'Sass', 'Browserify', 'Parse', 'AWS/S3' ],
         role: 'Solo developer, working with business partner.',
         link: 'http://www.orleanspulse.com',
+        description: [
+          "Initial prototype for a town-centric community portal. We worked with the town of Orleans, MA. through a series of public forums and working sessions."
+        ],
         images: [ imgRoot + '/orleanspulse1.png', imgRoot + '/orleanspulse2.png', imgRoot + '/orleanspulse3.png', ]
       },
       {
         categoryIndex: 0,
         name: 'Dataful Me',
-        technologies: [ 'Javascript', 'ReactJS', 'Sass', 'Browserify', 'Parse', 'AWS/S3' ],
+        technologies: [ 'Javascript', 'ReactJS', 'Sass', 'Browserify', 'MongoDB', 'NodeJS', 'AWS/S3' ],
         role: 'All the things.',
         link: 'http://datafulme.herokuapp.com',
+        description: [
+          "User-defined statistics and event tracking. Custom DSL for powerful time-sensitive queries. ",
+          "Web app portion is unfinished and has some rough edges, though the underlying web service is pretty complete."
+        ],
         images: [ imgRoot + '/datafulme1.png', imgRoot + '/datafulme2.png' ]
       },
       {
@@ -340,6 +361,9 @@
         technologies: [ 'Javascript', 'BackboneJS', 'Sass', 'Ruby', 'Sinatra', 'Heroku' ],
         role: 'All the things.',
         link: 'http://codeci.de',
+        description: [
+          "Group decision making without rehashing the same arguments over and over again. Define a problem or a question, then share with friends via email or Facebook, and get feedback."
+        ],
         images: [ imgRoot + '/codecide1.png', imgRoot + '/codecide2.png' ],
       },
       {
@@ -349,15 +373,44 @@
         role: 'Author',
         link: window.location.href,
         images: [  ],
-        repo: 'http://github.com/bbarr/replwithoutacause'
+        description: [
+          "The code behind this site."
+        ],
+        repo: 'http://github.com/bbarr/replwithoutacause.com'
       },
       { 
         categoryIndex: 1,
         name: 'Fortress to Solitude',
-        technologies: [ 'Javascript', 'SASS', 'Ruby', 'Sinatra', 'Heroku' ],
+        technologies: [ 'Javascript', 'SASS', 'Ruby', 'Sinatra', 'MongoDB', 'Heroku', 'Stripe' ],
         role: 'Sole developer, full-stack. Worked closely with business owner, who also did most of the design work.',
         link: 'http://fortresstosolitude.com',
+        description: [
+          "Art/Framing e-commerce site. Guest curators select the artwork, and orders are fulfilled using local printers and framers in Brooklyn, NY",
+          "Started on Shoppify, but later built a custom ruby back end for extra flexibility"
+        ],
         images: [ imgRoot + '/fts1.png', imgRoot + '/fts2.png' ]
+      },
+      {
+        categoryIndex: 1,
+        name: 'howaboutwe.com',
+        technologies: [ 'Javascript', 'SASS', 'Ruby', 'Rails', 'BackboneJS' ],
+        role: 'More of a Javascript specialist here, but did some full-stack work. Helped drive a refactor of a too-heavy backbone.js mobile web app.',
+        link: 'http://howaboutwe.com',
+        description: [
+        ],
+        images: [ imgRoot + '/howaboutwe1.png' ]
+      },
+      { categoryIndex: 2,
+        name: 'VolaryFoundation/Eagle',
+        technologies: [ 'Javascript', 'NodeJS', 'MongoDB', 'ExpressJS', 'Redis' ],
+        role: 'Author',
+        link: 'https://github.com/VolaryFoundation/Eagle',
+        images: [  ],
+        description: [
+          "Service to normalize resources across external services.",
+          "When we wanted to get information about a Group-type resource, we wanted to pull from various sources (like Meetup, Facebook, etc) and normalize the data for consumption in various clients."
+        ],
+        repo: 'https://github.com/VolaryFoundation/Eagle'
       },
       {
         categoryIndex: 2,
@@ -365,15 +418,23 @@
         technologies: [ 'Javascript' ],
         role: 'Author',
         link: 'http://github.com/bbarr/decor',
-        images: [  ]
+        images: [  ],
+        description: [
+          "Javascript decorater-style wrapper for when you need that sort of thing."
+        ],
+        repo: 'http://github.com/bbarr/decor'
       },
       { categoryIndex: 2,
         name: 'pointer.js',
         technologies: [ 'Javascript', 'ReactJS' ],
         role: 'Author',
-        link: 'http://github.com/bbarr/pointer',
-        images: [  ]
-      }
+        link: 'http://github.com/bbarr/pointer-js',
+        images: [  ],
+        description: [
+          "Om-inspired data links. Leverages React's immutable data addon"
+        ],
+        repo: 'http://github.com/bbarr/pointer-js'
+      },
     ]
   }
 

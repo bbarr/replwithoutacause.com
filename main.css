@@ -90,6 +90,11 @@ li {
   color: #fff;
 }
 
+#menu ul li ul li.ignore:hover {
+  cursor: default;
+  color: #333;
+}
+
 #menu h3 {
   text-transform: capitalize;
   font-weight: normal;
@@ -97,6 +102,7 @@ li {
 }
 
 #content {
+  transition: all 1s cubic-bezier(0.35, 0, 0.25, 1);
   position: absolute;
   top: 0;
   right: 0;
@@ -107,7 +113,6 @@ li {
   overflow-y: auto;
   overflow-x: hidden;
   background: #efefef;
-  transition: all 1s;
   overflow: hidden;
 }
 
@@ -119,7 +124,7 @@ li {
   border-left: 5px solid;
   margin-left: 0;
   margin-right: 0;
-  transition: margin .5s;
+  transition: margin .5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .project.selected {
@@ -163,6 +168,14 @@ a {
   margin-bottom: 20px;
 }
 
+.detail p {
+  margin-bottom: 10px;
+}
+
+.detail p:last-child {
+  margin: 0;
+}
+
 .gallery {
   float: right;
   width: 50%;
@@ -185,13 +198,26 @@ a {
   cursor: pointer;
 }
 
-.gallery img.big {
+.gallery .big {
   width: 79%;
   float: right;
   margin-left: 1%;
   border: 1px solid #888;
   box-sizing: border-box;
   min-height: 100px;
+}
+
+.gallery .repo-link {
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  border: 1px dashed #2C94C1;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.gallery .repo-link:hover {
+  opacity: 1;
 }
 
 img.image {
@@ -201,4 +227,9 @@ img.image {
 
 img.image.loading {
   opacity: 0;
+}
+
+.contact {
+  position: absolute;
+  bottom: 40px;
 }
