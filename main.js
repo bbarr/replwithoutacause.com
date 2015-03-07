@@ -103,9 +103,9 @@
             }
           </ul>
           <div className="contact">
-            <p><a href="bbarr.github.io">Blog</a></p>
-            <p><a href="github.com/bbarr">Code</a></p>
-            <p><a href="https://angel.co/brendan-barr-1">Resume</a></p>
+            <p><a href="http://bbarr.github.io">Blog</a></p>
+            <p><a href="https://github.com/bbarr">Code</a></p>
+            <p><a href="https://www.linkedin.com/pub/brendan-barr/70/366/155">Resume</a></p>
             <p><a href="mailto:bbarr1384@gmail.com">bbarr1384@gmail.com</a></p>
           </div>
         </div>
@@ -314,7 +314,7 @@
     },
 
     categories: [
-      { name: 'personal projects', className: 'start-up' },
+      { name: 'Start-ups', className: 'start-up' },
       { name: 'client work', className: 'clients' },
       { name: 'other code (libraries, etc)', className: 'other-code' }
     ],
@@ -331,6 +331,18 @@
           "Create better recipes by keeping track of tweaks and tasting notes."
         ],
         images: [ imgRoot + '/jotcook1.png', imgRoot + '/jotcook2.png', imgRoot + '/jotcook3.png' ]
+      },
+      {
+        categoryIndex: 0,
+        name: 'Buoy',
+        technologies: [ 'Javascript', 'Ionic', 'Angular', 'Sass', 'Firebase' ],
+        role: 'Co-creater, Lead developer',
+        link: 'http://buoyapp.net',
+        description: [
+          ' - Coming soon to IOS app store - ',
+          'Location-based sticky notes.'
+        ],
+        images: [ imgRoot + '/buoy1.jpg', imgRoot + '/buoy2.jpg' ]
       },
       {
         categoryIndex: 0,
@@ -366,18 +378,6 @@
         ],
         images: [ imgRoot + '/codecide1.png', imgRoot + '/codecide2.png' ],
       },
-      {
-        categoryIndex: 0,
-        name: 'This Code Portfolio',
-        technologies: [ 'Javascript', 'ReactJS', 'AWS/S3' ],
-        role: 'Author',
-        link: window.location.href,
-        images: [  ],
-        description: [
-          "The code behind this site."
-        ],
-        repo: 'http://github.com/bbarr/replwithoutacause.com'
-      },
       { 
         categoryIndex: 1,
         name: 'Fortress to Solitude',
@@ -399,6 +399,29 @@
         description: [
         ],
         images: [ imgRoot + '/howaboutwe1.png' ]
+      },
+      {
+        categoryIndex: 2,
+        name: 'This Code Portfolio',
+        technologies: [ 'Javascript', 'ReactJS', 'AWS/S3' ],
+        role: 'Author',
+        link: window.location.href,
+        images: [  ],
+        description: [
+          "The code behind this site."
+        ],
+        repo: 'http://github.com/bbarr/replwithoutacause.com'
+      },
+      { categoryIndex: 2,
+        name: 'governorjs',
+        technologies: [ 'Javascript', 'ReactJS' ],
+        role: 'Author',
+        link: 'http://github.com/bbarr/governorjs',
+        images: [  ],
+        description: [
+          "Event-driven data stores for React"
+        ],
+        repo: 'http://github.com/bbarr/governorjs'
       },
       { categoryIndex: 2,
         name: 'VolaryFoundation/Eagle',
