@@ -412,8 +412,21 @@
         ],
         repo: 'http://github.com/bbarr/replwithoutacause.com'
       },
-      { categoryIndex: 2,
-        name: 'governorjs',
+      {
+        categoryIndex: 2,
+        name: 'medium',
+        technologies: [ 'Javascript', 'Functional Programming', 'CSP' ],
+        role: 'Author',
+        link: 'https://www.npmjs.com/package/medium',
+        images: [  ],
+        description: [
+          "CSP-style channel library using ES7 async/await keywords"
+        ],
+        repo: 'http://github.com/bbarr/medium'
+      },
+      { 
+        categoryIndex: 2,
+        name: 'governor.js',
         technologies: [ 'Javascript', 'ReactJS' ],
         role: 'Author',
         link: 'http://github.com/bbarr/governorjs',
