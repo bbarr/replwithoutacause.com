@@ -2,7 +2,6 @@
 * { margin: 0; padding: 0 }
 
 html, body {
-  overflow: hidden;
 }
 
 li {
@@ -101,6 +100,37 @@ li {
   margin-bottom: 10px;
 }
 
+#menu .category-selector {
+	padding: 10px;
+	margin: 0 0 10px 0;
+	opacity: .6;
+	color: #fff;
+}
+
+#menu #category-selectors {
+	margin-top: 40px;
+}
+
+#menu .category-selector:hover {
+	cursor: pointer;
+}
+
+#menu .start-up {
+	background: #7BC4AD;
+}
+
+#menu .other-code {
+  background: #F6A68D;
+}
+
+#menu .clients {
+  background: #C5DA52;
+}
+
+#menu .category-selector.active {
+	opacity: 1;
+}
+
 #content {
   transition: all 1s cubic-bezier(0.35, 0, 0.25, 1);
   position: absolute;
@@ -113,7 +143,6 @@ li {
   overflow-y: auto;
   overflow-x: hidden;
   background: #efefef;
-  overflow: hidden;
 }
 
 .project {
@@ -138,6 +167,7 @@ li {
 
 .project h3 {
   margin-bottom: 20px;
+  font-size: 32px;
 }
 
 .project h3 small {
@@ -155,10 +185,6 @@ li {
   margin-right: 6px;
 }
 
-strong {
-  float: left;
-  margin-right: 10px;
-}
 
 a {
   color: #2C94C1;
